@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "f*ck overlays",
+    "description": "adds a context menu to delete sign-up/sign-in overlays that prevent you from viewing a page",
+    "version": "1.0",
+    "icons": { 
+        "16": "icon16.png",
+        "128": "icon128.png" },
+    "permissions": [
+      "contextMenus"
+    ],
+  "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["jquery-2.1.4.js", "fuckem.js"]
+        }
+    ],
+    "background": {
+        "persistent": true,
+        "scripts": ["fuckoverlaysbg.js"]
+    }
+  }
