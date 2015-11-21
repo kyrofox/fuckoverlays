@@ -12,7 +12,7 @@
   "content_scripts": [
         {
           "matches": ["<all_urls>"],
-          "js": ["jquery-2.1.4.js", "fuckem.js"]
+          "js": ["fuckem.js"]
         }
     ],
     "background": {
