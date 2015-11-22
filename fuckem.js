@@ -4,7 +4,7 @@ var element = null;
 document.addEventListener('mousedown', function(e){
     if( e.button == 2 ) { 
     console.log("RMB Clicked");
-    element = event.target;
+    element = e.target;
     console.log(element);
     return false; 
     } 
