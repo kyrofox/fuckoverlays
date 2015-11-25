@@ -1,30 +1,5 @@
-
-var element = null;
-
+var fucker = null;
 document.addEventListener('mousedown', function(e){
-    if( e.button == 2 ) { 
-    console.log("RMB Clicked");
-    element = e.target;
-    console.log(element);
-    return false; 
-    } 
-    return true; 
-});
-
-chrome.runtime.onMessage.addListener(
-  function(request, sender, sendResponse) {
-  console.log(request);
-    if(request === "fuckit") {
-        console.log("Received message from BG Script");
-        console.log(element);
-        if(element === null) {
-            setTimeout(function() {
-                element.parentElement.removeChild(element);
-                element = null;
-            }, 100);
-        } else {
-            element.parentElement.removeChild(element);
-            element = null;
-        }
-    }
-});
+    if( e.button == 2 ) { fucker = e.target; } });
+chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
+		try { fucker.parentElement.removeChild(fucker); } catch(lmao) {/*as if i care*/} });

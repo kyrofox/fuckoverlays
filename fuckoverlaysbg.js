@@ -1,9 +1,8 @@
-
- chrome.runtime.onInstalled.addListener(function() {
-  // Create one test item for each context type.
+chrome.runtime.onInstalled.addListener(function() {
   var id = chrome.contextMenus.create({
     "title": "Fuck it",
-    "id": "fuckoverlays"
+    "id": "fuckoverlays",
+	"contexts": ["all"]
   });
 });
 
