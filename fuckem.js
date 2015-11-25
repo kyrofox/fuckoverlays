@@ -1,18 +1,14 @@
 
 var element = null;
 
-
-$(document).ready(function(){ 
-
-  $(document).mousedown(function(e){ 
+document.addEventListener('mousedown', function(e){
     if( e.button == 2 ) { 
     console.log("RMB Clicked");
-    element = $(event.target);
+    element = e.target;
     console.log(element);
     return false; 
     } 
     return true; 
-  }); 
 });
 
 chrome.runtime.onMessage.addListener(
@@ -23,11 +19,11 @@ chrome.runtime.onMessage.addListener(
         console.log(element);
         if(element === null) {
             setTimeout(function() {
-                element.remove();
+                element.parentElement.removeChild(element);
                 element = null;
             }, 100);
         } else {
-            element.remove();
+            element.parentElement.removeChild(element);
             element = null;
         }
     }
