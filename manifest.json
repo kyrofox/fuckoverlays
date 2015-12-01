@@ -3,7 +3,7 @@
     "name": "f*ck overlays",
 	"author": "Mark Muego",
     "description": "adds a context menu to delete sign-up/sign-in overlays that prevent you from viewing a page",
-    "version": "1.1",
+    "version": "1.1.1",
     "icons": { 
         "16": "icon16.png",
         "128": "icon128.png" },

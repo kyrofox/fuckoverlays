@@ -1,9 +1,8 @@
-chrome.runtime.onInstalled.addListener(function() {
-  var id = chrome.contextMenus.create({
-    "title": "Fuck it",
-    "id": "fuckoverlays",
+
+chrome.contextMenus.create({
+	"title": "Fuck it",
+	"id": "fuckoverlays",
 	"contexts": ["all"]
-  });
 });
 
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
